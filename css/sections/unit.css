@@ -1,0 +1,191 @@
+.unit-showcase {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background: #C4C7C9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+/* Floating property preview card */
+.unit-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px 26px 16px 16px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  z-index: 10;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.unit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.16);
+}
+
+/* Left: Thumbnail with corner icon */
+.unit-card__img-wrap {
+  position: relative;
+  width: 120px;
+  height: 95px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.unit-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.unit-card__badge-icon {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.unit-card__badge-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Right: Property info & specs */
+.unit-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-card__price {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #071C1F;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.unit-card__address {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #8F9CA2;
+  margin-bottom: 12px;
+}
+
+/* Specs row: Bed, Bath, Sqft */
+.unit-card__specs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.unit-spec {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8F9CA2;
+}
+
+.unit-spec__icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.unit-spec__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Bottom protruding Circle Badge "UNIT NO. 9A" */
+.unit-badge-circle {
+  position: absolute;
+  bottom: -48px;
+  left: max(32px, calc((100vw - 1200px) / 2 + 120px));
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #FF5A3C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(255, 90, 60, 0.35);
+  z-index: 20;
+}
+
+.unit-badge-circle__label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.unit-badge-circle__number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .unit-showcase {
+    height: 360px;
+    margin-bottom: 60px;
+  }
+
+  .unit-card {
+    padding: 12px 18px 12px 12px;
+    gap: 16px;
+    max-width: 90%;
+  }
+
+  .unit-card__img-wrap {
+    width: 100px;
+    height: 80px;
+  }
+
+  .unit-card__price {
+    font-size: 20px;
+  }
+
+  .unit-card__specs {
+    gap: 10px;
+  }
+
+  .unit-badge-circle {
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+    left: 20px;
+  }
+
+  .unit-badge-circle__number {
+    font-size: 22px;
+  }
+}

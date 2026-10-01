@@ -1,0 +1,400 @@
+.hero {
+  background: #FCFCFD;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Container: Left Content + Right Hero Image */
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: stretch;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: max(32px, calc((100vw - 1240px) / 2));
+  padding-right: 0;
+  position: relative;
+  min-height: 520px;
+}
+
+/*  LEFT COLUMN  */
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 48px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero__main-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 10px;
+}
+
+/* Headline Area + Curly Arrow */
+.hero__headline-area {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.14;
+  color: #071C1F;
+  letter-spacing: -0.5px;
+}
+
+.hero__dot {
+  color: #071C1F;
+}
+
+/* Mũi tên cam  */
+.hero__curly-arrow {
+  position: absolute;
+  left: 343px;
+  top: 96px;
+  width: 228px;
+  height: 122px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero__curly-arrow svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Subtitle */
+.hero__desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #8F9CA2;
+  line-height: 1.65;
+  max-width: 380px;
+  margin-bottom: 28px;
+}
+
+/* Button Start Membership */
+.btn-membership {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FF5A3C;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(255, 90, 60, 0.25);
+}
+
+.btn-membership:hover {
+  background: #E1492C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 90, 60, 0.35);
+}
+
+.btn-arrow {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+/* HOUSE TABS (HOUSE 1, 2, 3)  */
+.hero__house-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  margin-top: 78px;
+  position: relative;
+  z-index: 5;
+}
+
+.house-tab {
+  background: #9E9E9E;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.house-tab:hover {
+  background: #878787;
+}
+
+.house-tab.active {
+  background: #8a8a8a;
+}
+
+.house-tab--1 {
+  width: 114px;
+  height: 80px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 12px 14px;
+  background: #9E9E9E;
+}
+
+.house-tab--2 {
+  width: 88px;
+  height: 60px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 10px 12px;
+  opacity: 0.95;
+}
+
+.house-tab--3 {
+  width: 88px;
+  height: 60px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 10px 12px;
+  opacity: 0.95;
+}
+
+/* Slider count: — 1 2 3 */
+.house-slider-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+  padding-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #9E9E9E;
+  user-select: none;
+}
+
+.count-dash {
+  font-weight: 700;
+  color: #071C1F;
+}
+
+.count-num {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.count-num.active {
+  font-weight: 700;
+  color: #071C1F;
+}
+
+.count-num:hover {
+  color: #071C1F;
+}
+
+/*  RIGHT COLUMN: Big Image + Play button */
+.hero__right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: -70px;
+}
+
+.hero__image-box {
+  position: relative;
+  width: 100%;
+  margin-top: -100px;
+  max-width: 560px;
+}
+
+.hero__image-wrap {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.hero__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nút "How it works" */
+.hero__how-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #FF5A3C;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px 8px 22px;
+  border-top-left-radius: 8px;
+  text-decoration: none;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.hero__how-btn:hover {
+  background: #E1492C;
+}
+
+.how-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.how-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(6px);
+}
+
+.how-play-icon svg {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+/*  FLOATING REVENUE CARD */
+.hero__revenue-card {
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 26px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  z-index: 25;
+  min-width: 180px;
+  text-align: left;
+}
+
+.revenue-icon {
+  margin-bottom: 14px;
+}
+
+.revenue-icon svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.revenue-val {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #071C1F;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.revenue-lbl {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #8F9CA2;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero__title {
+    font-size: 46px;
+  }
+
+  .hero__curly-arrow {
+    left: 220px;
+    top: 80px;
+    width: 180px;
+    height: 96px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero__left {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .hero__title {
+    font-size: 40px;
+  }
+
+  .hero__curly-arrow {
+    display: none;
+  }
+
+  .hero__image-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero__image-wrap {
+    height: 380px;
+    min-height: 380px;
+    border-radius: 16px;
+  }
+
+  .hero__right {
+    margin-left: 0;
+  }
+
+  .hero__revenue-card {
+    left: 24px;
+    transform: none;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero__title {
+    font-size: 32px;
+  }
+
+  .hero__house-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .house-slider-count {
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .hero__image-wrap {
+    min-height: 280px;
+  }
+
+  .hero__how-btn {
+    padding: 6px 10px 6px 16px;
+  }
+
+  .how-play-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}

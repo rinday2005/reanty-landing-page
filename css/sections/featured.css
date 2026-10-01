@@ -1,0 +1,114 @@
+.featured {
+  padding: 90px 0;
+  background: var(--clr-white);
+}
+
+.featured__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.featured__head-left h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: 8px;
+}
+
+.featured__head-left p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  color: var(--clr-text-light);
+  max-width: 320px;
+}
+
+.featured__tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.featured__tabs button {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--clr-text-light);
+  cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.featured__tabs button.active {
+  color: var(--clr-primary);
+  border-bottom-color: var(--clr-primary);
+  font-weight: 600;
+}
+
+.featured__tabs button:hover {
+  color: var(--clr-primary);
+}
+
+.featured__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.featured__more {
+  text-align: center;
+}
+
+.featured__more .btn-outline-primary {
+  border: 1px solid #FF5A3C;
+  color: #FF5A3C;
+  background: #ffffff;
+  padding: 12px 34px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.featured__more .btn-outline-primary:hover {
+  background: #FF5A3C;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 90, 60, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .featured__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured__grid .property-card:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .featured__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured__grid .property-card:last-child {
+    display: block;
+  }
+
+  .featured__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

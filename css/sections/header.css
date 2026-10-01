@@ -1,0 +1,271 @@
+/* =============================================================
+   HEADER.CSS — Topbar + Navbar
+   Reanty Real Estate
+   ============================================================= */
+
+/* ===========================
+   1. TOPBAR (dải thông báo đen)
+   =========================== */
+.topbar {
+  background: var(--clr-dark);
+  color: #c5ced1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Bên trái: email + địa chỉ */
+.topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.topbar__left a {
+  color: #c5ced1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.topbar__left a:hover {
+  color: var(--clr-white);
+}
+
+.topbar__left svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Bên phải: social icons */
+.topbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.topbar__socials {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.topbar__socials:hover {
+  opacity: 0.85;
+}
+
+.topbar__socials svg {
+  display: block;
+}
+
+/* ===========================
+   2. NAVBAR (thanh điều hướng)
+   =========================== */
+.header {
+  background: var(--clr-white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 0 var(--clr-border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+/* ===== LOGO ===== */
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  color: var(--clr-dark);
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header__logo:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.header__logo svg {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* Nav links */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__nav a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--clr-text);
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.header__nav a:hover {
+  color: var(--clr-primary);
+}
+
+.header__nav a.active {
+  color: var(--clr-primary);
+}
+
+.header__nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--clr-primary);
+  border-radius: 2px;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-login {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--clr-text);
+  transition: color 0.2s;
+}
+
+.link-login:hover {
+  color: var(--clr-primary);
+}
+
+.header__actions .btn-signup {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 10px 22px;
+}
+
+/* Hamburger (mobile) */
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--clr-dark);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Mobile drawer */
+.header__mobile {
+  display: none;
+  background: var(--clr-white);
+  border-top: 1px solid var(--clr-border);
+  padding: 16px 24px 20px;
+}
+
+.header__mobile.open {
+  display: block;
+}
+
+.header__mobile a {
+  display: block;
+  padding: 12px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--clr-text);
+  border-bottom: 1px solid var(--clr-border);
+  transition: color 0.2s;
+}
+
+.header__mobile a:last-of-type {
+  border-bottom: none;
+}
+
+.header__mobile a:hover {
+  color: var(--clr-primary);
+}
+
+.header__mobile a.active {
+  color: var(--clr-primary);
+}
+
+.mobile-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__actions {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar__left a:last-child {
+    display: none;
+  }
+}

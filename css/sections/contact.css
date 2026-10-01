@@ -1,0 +1,231 @@
+.contact {
+  padding: 90px 0 110px;
+  background: var(--clr-white);
+}
+
+.contact__head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.contact__head .section-label {
+  color: #FF5A3C;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact__head .section-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #121826;
+  letter-spacing: -0.5px;
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: flex-start;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.contact__left .contact__desc {
+  font-size: 14px;
+  color: #8F90A6;
+  max-width: 380px;
+  margin-bottom: 24px;
+  line-height: 1.65;
+}
+
+/* Danh sách  */
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.contact__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1E2022;
+}
+
+.contact__check-icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 11px;
+}
+
+.contact__images {
+  position: relative;
+  width: 440px;
+  height: 260px;
+  margin-top: 10px;
+}
+
+/* Hộp xám trên - trái */
+.contact__img-back {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 200px;
+  height: 150px;
+  background: #BDBDBD;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* Hộp cam */
+.contact__img-accent {
+  position: absolute;
+  left: 264px;
+  top: -10px;
+  width: 73px;
+  height: 70px;
+  background: #FF5A3C;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+/* Hộp đen nhỏ */
+.contact__img-dot {
+  position: absolute;
+  left: 310px;
+  top: -20px;
+  width: 34px;
+  height: 34px;
+  background: #1E2022;
+  border-radius: 8px;
+  z-index: 3;
+}
+
+/* Hộp xám lớn ở mặt trước  */
+.contact__img-front {
+  position: absolute;
+  left: 86px;
+  top: 68px;
+  width: 320px;
+  height: 180px;
+  background: #BDBDBD;
+  border-radius: 12px;
+  z-index: 4;
+}
+
+/* Right — Form card  */
+.contact__form-card {
+  background: #F2F6F7;
+  border-radius: 14px;
+  padding: 44px 38px 40px;
+  border: none;
+  box-shadow: none;
+}
+
+.contact__form-card h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #121826;
+  margin-bottom: 26px;
+  letter-spacing: -0.5px;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-size: 14px;
+  color: #1E2022;
+  background: #FFFFFF;
+  box-shadow: none;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255, 90, 60, 0.25);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #A0A0A0;
+  font-size: 13px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 110px;
+}
+
+.btn-send {
+  background: #FF5A3C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 38px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-send:hover {
+  background: #E04E32;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact__left .contact__desc {
+    max-width: 100%;
+  }
+
+  .contact__images {
+    width: 100%;
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 580px) {
+  .contact__head .section-title {
+    font-size: 28px;
+  }
+
+  .contact__form-card {
+    padding: 30px 20px;
+  }
+
+  .contact__images {
+    transform: scale(0.85);
+    transform-origin: left top;
+    height: 220px;
+  }
+}

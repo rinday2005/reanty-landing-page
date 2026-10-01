@@ -1,0 +1,172 @@
+/*  Primary Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 12px 26px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: var(--clr-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Outline Button (border only) */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--clr-text);
+  padding: 11px 24px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--clr-border);
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.btn-outline:hover {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+/* Outline Primary (orange border) */
+.btn-outline-primary {
+  display: inline-block;
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  text-align: center;
+}
+
+.btn-outline-primary:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/* Outline Dark (dark border)*/
+.btn-outline-dark {
+  display: inline-block;
+  border: 1px solid var(--clr-dark);
+  color: var(--clr-dark);
+  padding: 10px 32px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  text-align: center;
+}
+
+.btn-outline-dark:hover {
+  background: var(--clr-dark);
+  color: var(--clr-white);
+}
+
+/*  Sign Up  */
+.btn-signup {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.25s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-signup:hover {
+  background: var(--clr-primary-dark);
+}
+
+/*  Send (contact form) */
+.btn-send {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.btn-send:hover {
+  background: var(--clr-primary-dark);
+}
+
+/* Learn More (service cards) */
+.btn-learn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--clr-text);
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-learn::after {
+  content: ' →';
+}
+
+.btn-learn:hover {
+  color: var(--clr-primary);
+}
+
+/* Icon round button (property card arrow) */
+.btn-round {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--clr-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+  color: var(--clr-text);
+}
+
+.btn-round:hover,
+.btn-round.active {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/*  Responsive */
+@media (max-width: 480px) {
+  .btn-primary {
+    padding: 11px 20px;
+  }
+
+  .btn-outline {
+    padding: 10px 18px;
+  }
+}

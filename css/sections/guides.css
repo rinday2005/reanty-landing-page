@@ -1,0 +1,32 @@
+.guides {
+  padding: var(--section-py) 0;
+  background: var(--clr-white);
+}
+
+.guides__head {
+  margin-bottom: 48px;
+}
+
+.guides__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .guides__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .guide-card {
+    padding: 30px 24px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .guide-card {
+    padding: 28px 20px;
+  }
+}
