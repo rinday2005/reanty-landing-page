@@ -275,9 +275,9 @@
 /*  FLOATING REVENUE CARD */
 .hero__revenue-card {
   position: absolute;
-  left: 0;
-  bottom: -50px;
-  transform: translateX(-50%);
+  left: -60px;
+  bottom: -70px;
+  transform: none;
   background: #ffffff;
   border-radius: 20px;
   padding: 22px 26px;
